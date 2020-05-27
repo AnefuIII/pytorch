@@ -20,8 +20,8 @@ export AWS_ACCESS_KEY_ID=${CIRCLECI_AWS_ACCESS_KEY_FOR_SCCACHE_S3_BUCKET_V4:-}
 export AWS_SECRET_ACCESS_KEY=${CIRCLECI_AWS_SECRET_KEY_FOR_SCCACHE_S3_BUCKET_V4:-}
 set -x
 
-if [[ "$CIRCLECI" == 'true' && -d "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools" ]]; then
-  rm -rf "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools"
+if [[ "$CIRCLECI" == 'true' && -d "C:\\ProgramData\\Microsoft\\VisualStudio\\Packages" ]]; then
+  rm -rf "C:\\ProgramData\\Microsoft\\VisualStudio\\Packages"
 fi
 
 echo "Free space on filesystem before build:"
